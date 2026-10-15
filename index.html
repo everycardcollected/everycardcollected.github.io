@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Every Card, Collected</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="What 60,689 Pokémon TCG Pocket packs and 1,500 accounts reveal about odds, luck, pity, Wonder Pick and the game's hidden machinery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Martian+Mono:wght@400;600;700&family=Unbounded:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="site.css">
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><img src="art/icons/items/pikachu-face.webp" alt=""></span><span class="brand-name">Every Card, Collected<sup>*</sup></span></a>
+    <nav class="tabs" aria-label="Sections">
+      <button class="tab" data-go="story" aria-selected="true" type="button">Story</button>
+      <button class="tab" data-go="explore" aria-selected="false" type="button">Explore</button>
+      <button class="tab" data-go="method" aria-selected="false" type="button">Method</button>
+    </nav>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Toggle light or dark theme">◐</button>
+  </div>
+  <nav class="chapters" id="chapters" aria-label="Chapters" data-view="story"></nav>
+</header>
+
+<main id="top">
+  <div data-view="story" id="story">
+    <section class="hero wrap">
+      <div class="wide">
+        <div class="hero-grid h4-grid">
+          <div class="h4-copy">
+            <div class="kicker">A field study of Pokémon TCG Pocket</div>
+            <h1>Every card in the game, <span class="holo-text">collected</span><a class="h4-ast" href="#h4-note" aria-label="footnote">*</a></h1>
+            <p class="lede">In one week, 1,500 accounts opened 60,689 packs, 302,600 cards in all, until every card you can pull had turned up. Here’s what that taught us about odds, luck and how the game works.</p>
+            <div class="h4-cta"><a class="btn" href="#expedition">Read the findings</a><a class="btn ghost" href="#x-binder">Browse every card</a><a class="btn ghost" href="#x-week">Relive the week</a></div>
+            <p class="h4-note" id="h4-note">*All 3,480 cards you can pull from a pack.</p>
+          </div>
+          <div class="h4-fan" id="h4-fan" aria-hidden="true"></div>
+        </div>
+        <div class="bh-plate">
+          <div class="bh-title">
+            <div class="plate-title">The race to fill the binder</div>
+            <div class="plate-sub">Every card you can pull from a pack, grouped by rarity. Each one lights up the moment the first of our 1,500 accounts found it.</div>
+          </div>
+          <div id="bh"></div>
+        </div>
+      </div>
+    </section>
+    <div id="story-body">
+
+    <!-- 1 · WHAT WE DID -->
+    <section class="chapter wrap" id="expedition" data-short="What we did">
+      <div class="col">
+        <div class="eyebrow"><span>Chapter 1</span><span class="rule"></span><span>What we did</span></div>
+        <h2>A lifetime of free packs, opened in a week</h2>
+        <p class="lede">For seven days, we played 1,500 brand-new accounts around the clock. Each did what a very dedicated new player would: finish the tutorial, clear solo battles, claim every reward and spend every hourglass on packs, until every card you can pull from a pack had turned up.</p>
+        <p>The free pack timer gives you about two packs a day. At that pace, our 60,689 packs would take one person <strong>83 years</strong>. Here is that lifetime, one square per month, coloured by the day of our week when we actually opened those packs.</p>
+      </div>
+      <div class="wide">
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">One player's lifetime of free packs</div><div class="plate-sub">Each square is a month of free packs (about 61). Columns are years. Hover a month to see when we opened it.</div></div></div>
+          <div class="chart" data-chart="weekLifetime"></div>
+          <div class="plate-foot">Day 3 alone covered 20 years.</div>
+        </div>
+        <div data-chart="weekStats"></div>
+      </div>
+    </section>
+
+    <!-- 3 · ODDS -->
+    <section class="chapter wrap" id="odds" data-short="Honest odds?">
+      <div class="col">
+        <div class="eyebrow"><span>Chapter 2</span><span class="rule"></span><span>Are the odds honest?</span></div>
+        <h2>Across 60,689 packs, the odds screen held up</h2>
+        <p class="lede">We compared what came out of our packs with each line of every pack's odds screen: each pack, each card slot, each rarity. If the game quietly paid out less than it advertises, it would show up here as dots sliding left. None of them leave the range chance allows.</p>
+      </div>
+      <div class="wide">
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">The odds screen vs our packs</div><div class="plate-sub">For each rarity: what the odds screens promised for the exact packs we opened, and what we actually pulled. Tap a row to see every pack.</div></div></div>
+          <div data-chart="oddsBoard"></div>
+        </div>
+        <div data-chart="oddsTests"></div>
+      </div>
+    </section>
+
+    <!-- 4 · RARE PACKS -->
+    <section class="chapter wrap" id="godpacks" data-short="God packs">
+      <div class="col">
+        <div class="eyebrow"><span>Chapter 3</span><span class="rule"></span><span>God packs and other rare packs</span></div>
+        <h2>28 god packs, right on schedule</h2>
+        <p class="lede">Before picking any cards, the game first rolls which <em>kind</em> of pack you get. Almost always it's a normal pack. Rarely, it's something special. Here are all four kinds, each shown with a real pack one of our trainers opened.</p>
+      </div>
+      <div class="wide">
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">Four kinds of pack</div><div class="plate-sub">Published odds, what our 60,689 packs produced, and a real example of each. Glowing cards are what makes the pack special; tap any card to open it.</div></div></div>
+          <div data-chart="packKinds"></div>
+        </div>
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">Hall of Fame</div><div class="plate-sub">Every god pack the fleet opened, in order. Tap a card to open it, a name for that trainer, or “See this pack” to open it in the pack viewer.</div></div>
+            <div class="seg" id="gp-filter" role="group" aria-label="Filter god packs"></div></div>
+          <div class="gallery" id="gp-gallery"></div>
+        </div>
+      </div>
+      <div class="col">
+        <p>God packs are what people clip and share, but they're a rounding error in a collection: just <strong>1.1%</strong> of our star-or-better cards came from one. In newer sets the quiet hero is the 6-card pack's bonus slot, which produced <strong>59% of all our shinies</strong>. Normal packs in those sets can't contain a shiny at all.</p>
+      </div>
+    </section>
+
+    <!-- 5 · PITY -->
+    <section class="chapter wrap" id="pity" data-short="Bad-luck protection">
+      <div class="col">
+        <div class="eyebrow"><span>Chapter 4</span><span class="rule"></span><span>Bad-luck protection</span></div>
+        <h2>Twelve bad packs, then a guaranteed ex</h2>
+        <p class="lede">The July 2026 update announced a guarantee for unlucky streaks (gacha players call this a "pity" system), but never said what triggers it. Here is the rule. The game keeps a hidden count for each set. Every pack whose best card is 3-diamond or lower adds one. Any 4-diamond or better resets it to zero. Hit 12 in a row, and your next pack is guaranteed a 4-diamond or better as its last card.</p>
+        <p>The count is shared by every pack in that set. We read the count back from every account after every pack: <strong>26,934 of 26,935</strong> followed this rule exactly.</p>
+      </div>
+      <div class="wide">
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">The counter, as a board game</div><div class="plate-sub">Each square is a count. Arrows show how often a pack moved it forward; ↺ shows how often a hit sent it back to zero.</div></div></div>
+          <div class="chart" data-chart="pityboard"></div>
+        </div>
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">The only three trainers who reached 12</div><div class="plate-sub">The pack that took each count from 11 to 12, and what happened next. Hover the cards.</div></div></div>
+          <div class="chart" data-chart="luckPityStories"></div>
+        </div>
+      </div>
+      <div class="col">
+        <p>It's real, but it rarely kicks in. About 1 pack in 4 has a 4-diamond or better anyway, so twelve misses in a row is uncommon. Only 3 of our 1,500 accounts got there, all in Genetic Apex. Your odds don't quietly improve as the count climbs, either. Packs 1 to 11 use the normal odds, and the game only swaps the table at 12. Even if you put 100 packs into one set, you only have about a 60% chance of ever seeing a pity pack.</p>
+        <details class="hwk"><summary>How we know</summary><dl>
+          <dt>Observed</dt><dd>We read every account's hidden counters back after every pack: in 26,934 of 26,935 packs the count moved exactly as the rule says. Two accounts reached 12 and their next pack in that set used the guarantee table; a third reached 12 and never opened that set again.</dd>
+          <dt>Seen in the app</dt><dd>The guarantee tables appear in the published odds data at 0.000%: they're never rolled, only swapped in at 12.</dd>
+          <dt>Limits</dt><dd>Only two real pity packs, both in Genetic Apex, so we can't say much about what a pity pack holds beyond "a 4-diamond or better".</dd>
+        </dl></details>
+      </div>
+    </section>
+
+    <!-- 6 · LUCK -->
+    <section class="chapter wrap" id="luck" data-short="Luck">
+      <div class="col">
+        <div class="eyebrow"><span>Chapter 5</span><span class="rule"></span><span>Lucky and unlucky trainers</span></div>
+        <h2>Some trainers got lucky. We found no sign anyone was favoured.</h2>
+        <p class="lede">Every account opened a different mix of packs, so we scored each one on how rare its hits were: every 4-diamond-or-better card, god pack and bonus card counts, and rarer ones count for more. Then we replayed each account's exact packs 20,000 times with the published odds and ranked its real score against those replays. Star-card counts, expected versus pulled, are the easy-to-read version you'll see on hover.</p>
+      </div>
+      <div class="wide">
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">1,486 trainers, ranked by luck</div><div class="plate-sub">Each dot is one account. Further right means rarer hits than its packs should have given. Hover for the story, tap a dot to spotlight that trainer below, or compare with a fleet where luck is pure chance.</div></div><div class="legend" id="swarm-legend"></div></div>
+          <div class="chart" data-chart="swarm"></div>
+          <div class="plate-foot" id="swarm-foot"></div>
+        </div>
+        <div class="two" id="leaderboards"></div>
+      </div>
+    </section>
+
+    <!-- 7 · MYTHS -->
+    <section class="chapter wrap" id="myths" data-short="Myths">
+      <div class="col">
+        <div class="eyebrow"><span>Chapter 6</span><span class="rule"></span><span>Myth check</span></div>
+        <h2>What players believe, tested</h2>
+        <p class="lede">Most pull superstitions are easy to test with 60,000 packs. Pick one to see the evidence. Most found no effect at all: as far as 60,000 packs can tell, the server rolls every pack from the same odds, whoever you are and whenever you open it. Two turned out to be true. Wonder Pick is in here too.</p>
+      </div>
+      <div class="wide">
+        <div class="plate v3luck-lab">
+          <div data-chart="luckMythLab"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 9 · WHICH PACK -->
+    <section class="chapter wrap" id="packs" data-short="Which pack?">
+      <div class="col">
+        <div class="eyebrow"><span>Chapter 7</span><span class="rule"></span><span>Which pack should you open?</span></div>
+        <h2>Same odds for two years. Bigger sets.</h2>
+        <p class="lede">Every normal pack, from Genetic Apex to the newest set, uses the same rarity odds for cards 4 and 5. A crown is about 0.2% a pack everywhere. What changed is how many cards share those odds. Newer sets are bigger, so any one card you're chasing is harder to get.</p>
+      </div>
+      <div class="col">
+        <h3>Take any pack apart</h3>
+        <p>Pick a pack to see what each of its 5 or 6 cards can be, how many cards it holds, and what our fleet actually pulled from it.</p>
+      </div>
+      <div class="wide">
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">Pack inspector</div><div class="plate-sub">Every pack in the game, grouped by series. Pick one to see what each card can be, whether our packs matched the odds screen, and its chase cards.</div></div></div>
+          <div data-chart="packsInspector"></div>
+        </div>
+      </div>
+      <div class="col">
+        <p>Every pack also pays <strong>5 Pack Points</strong>, which you can trade for a specific card. For crowns that's the better deal: 2,500 points (500 packs), while a typical crown takes about 630 packs before you have even a 50% chance of pulling it. For 3-stars it's the opposite, since you'll almost always pull the one you want first. Either way, finishing a set on free packs alone takes years:</p>
+      </div>
+      <div class="wide">
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">How long to finish a set on free packs</div><div class="plate-sub">Packs only: this ignores Pack Points, Wonder Pick and trades, which all make it faster. Based on 1,000 simulated players opening only that pack at two free packs a day.</div></div></div>
+          <div class="chart" data-chart="completion"></div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · UNDER THE HOOD -->
+    <section class="chapter wrap" id="secrets" data-short="Under the hood">
+      <div class="col">
+        <div class="eyebrow"><span>Chapter 8</span><span class="rule"></span><span>Under the hood</span></div>
+        <h2>What happens when you tap "Open"</h2>
+        <p class="lede">We read the Android app's code (version 1.7.5) and studied every reply the game's servers sent our accounts. Here is the short version of how a pack is actually opened, followed by the best of what we found along the way.</p>
+      </div>
+      <div class="wide">
+        <div class="plate"><div class="plate-head"><div class="plate-title">Opening a pack, step by step</div></div><div class="seq" id="seq-pack"></div></div>
+      </div>
+      <div class="col">
+        <h3>The anti-cheat report that pretends to be your favourite energy</h3>
+        <p>One message the app sends looks like a list of favourite energy types: <span class="mono">colorless</span>, <span class="mono">grass</span>, <span class="mono">fire</span> and so on, each true or false. They aren't preferences. Each flag reports a tampering check, such as a rooted phone, an emulator or a modified app, under a harmless-sounding name so it blends in. There were nine checks and ten types, so Metal is a decoy that's never set.</p>
+      </div>
+      <div class="wide">
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">The "energy" field and what it really reports</div><div class="plate-sub">Decoded from the app's network message definitions</div></div></div>
+          <div class="energy-grid" id="energy-grid"></div>
+        </div>
+      </div>
+      <div class="col">
+        <h3>Part of the server is written in Go, and there's no "your server"</h3>
+        <p>Before you buy a pack, the server hands your phone a small token to send back. We decoded 400 of them: each one is a Go-language data blob that quietly identifies which server process made it. We saw <strong>23 different processes</strong>, and a single account's tokens came from as many as 8 of them. So at least this part of the server isn't tied to one machine per player; your requests can be served by different processes from one moment to the next.</p>
+      </div>
+      <div class="wide">
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">23 server processes, one fleet</div><div class="plate-sub">Every token we decoded, grouped by the process that made it, and how many different processes each account with 4 or more tokens heard from.</div></div></div>
+          <div class="chart" data-chart="serverGob"></div>
+          <div class="plate-foot">Both panels are measured. We know how many processes each account reached, not which ones, so we don't draw lines between them.</div>
+          <details class="hwk"><summary>How we know</summary><dl>
+            <dt>Observed</dt><dd>400 tokens decoded as Go's own data format (gob), each carrying a process fingerprint: 23 distinct fingerprints, up to 8 for a single account.</dd>
+            <dt>Inferred</dt><dd>That the purchase-token service is written in Go and spread across many interchangeable processes. It doesn't tell us what language the rest of the backend uses, or how requests are routed.</dd>
+          </dl></details>
+        </div>
+      </div>
+      <div class="col">
+        <h3>More from the code</h3>
+        <p>Four favourites from the app's code and data, with the rest one tap away. Each is marked <em>Confirmed</em> (we can see it in the code or data) or <em>Inferred</em> (strongly implied).</p>
+      </div>
+      <div class="wide">
+        <div class="secrets" id="secrets-grid"></div>
+      </div>
+    </section>
+
+    <!-- 9 · THE LAST 1% -->
+    <section class="chapter wrap" id="endgame" data-short="The last 1%">
+      <div class="col">
+        <div class="eyebrow"><span>Chapter 9</span><span class="rule"></span><span>The last 1%</span></div>
+        <h2>The last 34 cards took 41 hours</h2>
+        <p class="lede" id="eg-lede">By hour 129, our accounts had found 99% of the cards. The last 34 took another 41 hours and 18,416 packs, 30% of the whole week's packs for 1% of the binder.</p>
+      </div>
+      <div class="wide">
+        <div data-chart="endgame"></div>
+      </div>
+    </section>
+
+    <!-- 11 · THE COLLECTION -->
+    <section class="chapter wrap" id="finale" data-short="The collection">
+      <div class="col">
+        <div class="eyebrow"><span>Chapter 10</span><span class="rule"></span><span>The collection</span></div>
+        <h2>359,412 cards in 1,500 binders</h2>
+        <p class="lede">When the run ended, the accounts held <strong>359,412 cards</strong> between them, counting tutorial and starter-deck cards. The most common card in the fleet isn't from a lucky pull. It's <strong>Cottonee</strong>, because every account got copies in the tutorial and starter deck and then kept pulling more. At the other end, <strong>87 cards</strong> exist as a single copy in the whole fleet.</p>
+      </div>
+      <div class="wide">
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">The most copies</div><div class="plate-sub">Cards the fleet ended up holding the most of, across all 1,500 accounts</div></div></div>
+          <div data-chart="finaleMost"></div>
+        </div>
+        <div class="plate">
+          <div class="plate-head"><div><div class="plate-title">One copy in the whole fleet</div><div class="plate-sub">87 cards exist exactly once across all 1,500 accounts. Here are the rarest of them.</div></div></div>
+          <div data-chart="finaleSingles"></div>
+        </div>
+      </div>
+      <div class="col">
+        <p>No single account came close to a full binder; the best held 12% of the game. We found a group of <strong>278 trainers</strong> whose binders, pooled together, hold every card.</p>
+        <p class="lede"><a href="#explore" id="to-explore">Browse the whole collection in Explore →</a></p>
+      </div>
+      <div class="wide finale-art"><img src="art/ui/home-social-illustration.webp" alt="Pikachu, Eevee, Snorlax and friends surrounded by flying cards" loading="lazy"></div>
+      <div class="wide">
+        <div class="v3server-credits" data-chart="serverCredits" aria-label="Closing credits"></div>
+      </div>
+    </section>
+    </div>
+  </div>
+  <div data-view="explore" id="explore" hidden></div>
+  <div data-view="method" id="method" hidden>
+    <section class="chapter wrap" style="padding-top:40px">
+      <div class="col">
+        <div class="eyebrow"><span>Method</span><span class="rule"></span><span>How we know what we know</span></div>
+        <h2>Where the numbers come from</h2>
+        <p class="lede">Three sources, cross-checked against each other: purchase receipts from 1,500 accounts, the odds the game publishes in-app, and a static read of the Android client.</p>
+
+        <h3>The data</h3>
+        <ul class="method-list">
+          <li><strong>Pack receipts.</strong> Every pack purchase returns the cards and the odds table the server rolled. We logged 60,689 packs and 302,600 cards. A few hundred six-card packs went unlogged. That's why the fleet shows slightly fewer bonus packs than the odds predict (1,656 vs about 1,742).</li>
+          <li><strong>Account readbacks.</strong> After every action, each account's balances were read back: pack stamina, hourglasses, Pack Points, XP, level and the hidden pity counters. We used those readings to rebuild the economy and the pity rules.</li>
+          <li><strong>Published odds.</strong> The in-app odds screen for each of 28 packs, captured as structured data: 15,179 per-card probabilities across every table and slot.</li>
+          <li><strong>The client.</strong> Pokémon TCG Pocket 1.7.5 for Android, decompiled: network message definitions, configuration assets and master data. Findings marked <em>Confirmed</em> are visible in code or data. <em>Inferred</em> findings are strongly implied. <em>Speculative</em> findings are labelled.</li>
+          <li><strong>The run.</strong> One week, 1,500 accounts. Accounts were created and played by automation, which cleared beginner content, claimed rewards and opened every pack it could afford.</li>
+        </ul>
+
+        <h3>How we tested</h3>
+        <ul class="method-list">
+          <li><strong>Against the published odds, not against each other.</strong> Every expectation comes from the game's own odds tables for the exact packs opened. "Luck 1.00×" means exactly as advertised.</li>
+          <li><strong>Correcting for many tests.</strong> When we scanned 421 odds cells, 3,240 cards or 163 hour-by-day cells, we corrected p-values (Holm or Benjamini–Hochberg). A single scary-looking cell is expected by chance and isn't reported as a finding.</li>
+          <li><strong>Luck scores.</strong> Each account's exact sequence of packs was replayed 20,000 times with the published odds. Its luck percentile is the share of replays that came out less lucky. Only ◆◆◆◆-or-better outcomes, god packs and bonus cards count.</li>
+          <li><strong>Wonder Pick weighting.</strong> We compared the likelihood of the 797 observed picks under a fair 1-in-5 model and under a model that applies the rarity weights found in the client, with a fitted exponent in between.</li>
+        </ul>
+
+        <h3>Biases to keep in mind</h3>
+        <ul class="method-list">
+          <li>The automation chose <em>which</em> pack to open, to chase missing cards. That skews which packs were opened, but not what came out of them.</li>
+          <li>Wonder Pick feeds were chosen because they contained a wanted card. The server's pick among the five wasn't affected by that.</li>
+          <li>Accounts played like a very efficient new player for one week. Long-term, paying or late-game behaviour isn't covered, and dupe protection near a complete collection is untested.</li>
+          <li>No pack launched during the run, so launch-day luck is untested.</li>
+        </ul>
+
+        <h3>Privacy</h3>
+        <p>Every trainer name on this site, like "Bashful Pecha" or "Bold Chople", is a random alias generated for this report. Aliases were assigned in shuffled order, so they say nothing about the real accounts. No player ids, nicknames, friend codes or device data are published. Card images and game art are © their owners and appear only for commentary.</p>
+
+        <h3>Game art used on this site</h3>
+        <p>Every image here was extracted from the game's own files: card art, pack art, set logos and the app's interface art. Here is the interface art, credited to its owners.</p>
+        <div class="art-credits" id="art-credits"></div>
+        <h3>Rarity key</h3>
+        <div class="rarity-key" id="rarity-key"></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="wrap">
+  <div class="wide">
+    <p><strong>Every Card, Collected</strong> is an independent fan research project. It is not affiliated with or endorsed by The Pokémon Company, Creatures, GAME FREAK, or DeNA. Card images © their respective owners, shown for commentary and research.</p>
+    <p>Trainer names on this site are randomly generated aliases. They are not the accounts' real names.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/openings.js"></script>
+<script src="js/story.js"></script>
+<script src="js/explore.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/binder_hero.js"></script>
+<script src="js/week.js"></script>
+<script src="js/odds.js"></script>
+<script src="js/godpacks.js"></script>
+<script src="js/pity.js"></script>
+<script src="js/luck.js"></script>
+<script src="js/myths.js"></script>
+<script src="js/packs.js"></script>
+<script src="js/secrets.js"></script>
+<script src="js/endgame.js"></script>
+<script src="js/collection.js"></script>
+<script src="js/method.js"></script>
+<script src="js/app.js"></script>

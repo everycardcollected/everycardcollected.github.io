@@ -1,0 +1,1 @@
+{"id":"wonder_weighting_test","title":"Is Wonder Pick secretly weighted by rarity?","data":{"rarest_card_picked":{"n":797,"observed":238,"expected_uniform":235.6},"duplicates":{"n":32,"observed":10,"expected_uniform":13.2,"z":-1.16}}}
